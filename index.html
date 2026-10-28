@@ -195,6 +195,80 @@
     height: 120px;
   }
 }
+    ```css
+/* Education section */
+.education-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.education-item:last-of-type {
+  border-bottom: none;
+}
+
+.university-logo {
+  width: 120px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.university-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.education-details {
+  flex: 1;
+}
+
+.education-details h3 {
+  color: #174a70;
+  margin: 0 0 4px;
+}
+
+.education-details p {
+  margin: 5px 0;
+}
+
+.university-location {
+  color: #667788;
+  font-size: 0.95rem;
+}
+
+.selected-courses {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5eaf0;
+}
+
+.selected-courses h3 {
+  color: #174a70;
+}
+
+@media (max-width: 600px) {
+  .education-item {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .university-logo {
+    width: 75px;
+    min-width: 75px;
+  }
+
+  .university-logo img {
+    max-height: 85px;
+  }
+}
   </style>
 </head>
 
@@ -224,6 +298,7 @@
     <a href="#about">About</a>
     <a href="#major-projects">Major Projects</a>
     <a href="#other-projects">Other Projects</a>
+    <a href="#education">Education</a>
     <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </div>
@@ -413,6 +488,50 @@
       </li>
     </ul>
   </article>
+</section>
+
+    ```html
+<section id="education">
+  <h2>Education</h2>
+
+  <article class="education-item">
+    <div class="university-logo">
+      <img src="media/Sharif_engLogo.png"
+           alt="Sharif University of Technology logo">
+    </div>
+
+    <div class="education-details">
+      <h3>Sharif University of Technology</h3>
+      <p class="university-location">Tehran, Iran</p>
+      <p><strong>M.Sc. in Mechanical Engineering — Applied Design</strong></p>
+      <p><strong>GPA:</strong> 18.82/20 (4.00/4.00)</p>
+      <p><strong>Academic Rank:</strong> 7th among 61 students (2022 intake)</p>
+    </div>
+  </article>
+
+  <article class="education-item">
+    <div class="university-logo">
+      <img src="media/kntu_engLogo.png"
+           alt="K. N. Toosi University of Technology logo">
+    </div>
+
+    <div class="education-details">
+      <h3>K. N. Toosi University of Technology</h3>
+      <p class="university-location">Tehran, Iran</p>
+      <p><strong>B.Sc. in Mechanical Engineering</strong></p>
+      <p><strong>GPA:</strong> 18.61/20 (3.93/4.00)</p>
+      <p><strong>Academic Rank:</strong> 4th among 106 students (2018 intake)</p>
+    </div>
+  </article>
+
+  <div class="selected-courses">
+    <h3>Selected Courses</h3>
+    <p>
+      Robotic Surgery, Nonlinear Control, Artificial Neural Networks,
+      Computer Vision, Social and Cognitive Robotics,
+      Measurement Systems and Control
+    </p>
+  </div>
 </section>
 
     <section id="cv">
