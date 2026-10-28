@@ -157,7 +157,44 @@
     max-height: 300px;
   }
 }
+/* Profile photo and header layout */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
 
+.profile-photo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid white;
+  flex-shrink: 0;
+}
+
+.header-text {
+  min-width: 0;
+}
+
+.header-text h1 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
   </style>
 </head>
 
