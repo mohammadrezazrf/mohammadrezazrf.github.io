@@ -113,6 +113,51 @@
         padding: 20px;
       }
     }
+
+    
+.project {
+  margin: 28px 0;
+}
+
+.project h3 {
+  color: #174a70;
+  margin-bottom: 12px;
+}
+
+.project h4 {
+  margin-bottom: 8px;
+}
+
+.project-media {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  max-height: 440px;
+  object-fit: contain;
+  background: #101820;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.project video {
+  aspect-ratio: 16 / 9;
+}
+
+.project li {
+  margin-bottom: 10px;
+}
+
+#major-projects,
+#other-projects {
+  scroll-margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .project-media {
+    max-height: 300px;
+  }
+}
+
   </style>
 </head>
 
@@ -126,15 +171,16 @@
     </div>
   </header>
 
-  <nav>
-    <div class="container">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+  
+<nav>
+  <div class="container">
+    <a href="#about">About</a>
+    <a href="#major-projects">Major Projects</a>
+    <a href="#other-projects">Other Projects</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
   <main class="container">
 
@@ -152,30 +198,132 @@
       </p>
     </section>
 
-    <section id="research">
-      <h2>Research Interests</h2>
-      <span class="tag">Medical Robotics</span>
-      <span class="tag">Magnetic Microrobotics</span>
-      <span class="tag">Robot Modeling and Control</span>
-      <span class="tag">Mechatronics</span>
-      <span class="tag">Computer Vision</span>
-      <span class="tag">Robot Learning</span>
+    
+<section id="major-projects">
+  <h2>Major Projects</h2>
 
-      <h3>Selected Research Projects</h3>
+  <article class="project">
+    <h3>Magnetic Capsule Endoscopy with a Biopsy Mechanism</h3>
 
-      <p><strong>Magnetic Capsule Endoscopy</strong></p>
-      <p>
-        Development of a magnetically actuated capsule robot with
-        a biopsy mechanism, including system design, localization,
-        and control.
-      </p>
+    <p>
+      Design and development of a magnetically actuated capsule
+      robot equipped with a fail-safe biopsy mechanism. The project
+      combines mechanical design, magnetic actuation, experimental
+      validation, and robotic system development.
+    </p>
 
-      <p><strong>Magnetic Microrobotics</strong></p>
-      <p>
-        Modeling and control of ferrofluid marble robots using
-        magnetic actuation and vision-based feedback.
-      </p>
-    </section>
+    <video class="project-media"
+           controls autoplay muted loop playsinline
+           preload="metadata"
+           poster="media/capsule-poster.jpg">
+      <source src="media/capsule-demo.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+
+    <h4>Related Publications</h4>
+    <ul>
+      <li>
+        <em>Replace with the exact title of your capsule endoscopy paper.</em>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          Read paper
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <article class="project">
+    <h3>Deep-Learning-Based Magnetic Localization</h3>
+
+    <p>
+      Development of a magnetic localization method using a
+      sensor array and symmetry-based independent fully connected
+      neural networks to estimate the position and orientation
+      of a magnetic capsule.
+    </p>
+
+    <video class="project-media"
+           controls autoplay muted loop playsinline
+           preload="metadata"
+           poster="media/localization-poster.jpg">
+      <source src="media/localization-demo.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+
+    <h4>Related Publications</h4>
+    <ul>
+      <li>
+        <em>Replace with the exact title of your IEEE Sensors Journal paper.</em>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          Read paper
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <article class="project">
+    <h3>Independent Position Control of Ferrofluid Marble Robots</h3>
+
+    <p>
+      Investigation of magnetic actuation and independent
+      position control of two ferrofluid marble robots operating
+      in shared and parallel workspaces, using vision-based
+      feedback and advanced control methods.
+    </p>
+
+    <video class="project-media"
+           controls autoplay muted loop playsinline
+           preload="metadata"
+           poster="media/ferrofluid-poster.jpg">
+      <source src="media/ferrofluid-demo.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+
+    <h4>Related Publications</h4>
+    <ul>
+      <li>
+        <em>Independent Position Control of Two Ferrofluid Marble Robots in Shared and Parallel Workspaces</em>
+        <span> — manuscript status and publication link to be added.</span>
+      </li>
+    </ul>
+  </article>
+</section>
+
+<section id="other-projects">
+  <h2>Other Projects</h2>
+
+  <p>
+    Additional research projects, prototypes, and technical
+    developments will be presented here.
+  </p>
+
+  <article class="project">
+    <h3>Enhanced Control of a Magnetic Capsule Robot</h3>
+
+    <p>
+      Research on optimal control of a magnetically actuated
+      capsule robot, considering the dynamics of the small
+      intestine and the design of the magnetic actuation system.
+    </p>
+
+    <img class="project-media"
+         src="media/capsule-control.jpg"
+         alt="Magnetic capsule robot control experiment">
+
+    <h4>Related Publications</h4>
+    <ul>
+      <li>
+        <em>Add the exact title of the associated conference paper.</em>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          Read paper
+        </a>
+      </li>
+    </ul>
+  </article>
+</section>
 
     <section id="publications">
       <h2>Publications</h2>
